@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  hive-metastore:
+    image: hive:latest
+    container_name: hive-metastore
+    environment:
+      HIVE_METASTORE_DB: 'postgresql'
+      HIVE_METASTORE_URI: 'jdbc:postgresql://postgres:5432/hive_metastore'
+    ports:
+      - "9083:9083"
+
+  hive-server:
+    image: hive:latest
+    container_name: hive-server
+    ports:
+      - "10000:10000"
+    depends_on:
+      - hive-metastore
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: 'your_db_name'
+      POSTGRES_USER: 'your_username'
+      POSTGRES_PASSWORD: 'your_password'
+    ports:
+      - "5432:5432"
+
+  superset:
+    image: apache/superset
+    container_name: superset
+    environment:
+      - SUPERSET_DATABASE_URI=postgresql://your_username:your_password@postgres:5432/your_db_name
+    ports:
+      - "8088:8088"
+    depends_on:
+      - postgres
