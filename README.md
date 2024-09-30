@@ -36,7 +36,7 @@ This project aims to build a data warehousing solution using Apache Hive for dat
 
 Here is an example of a visualization created in Apache Superset:
 
-![Apache Superset Visualization](images/superset_visualization.png)
+![Apache Superset Visualization](superset_visualization.png)
 
 ## Prerequisites
 
