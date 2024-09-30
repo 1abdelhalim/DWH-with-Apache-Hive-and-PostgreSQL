@@ -26,9 +26,8 @@ This project aims to build a data warehousing solution using Apache Hive for dat
 ├── docker-compose.yml
 ├── etl
 │   ├── energy_data.csv
-│   ├── etl_script.py
-├── images
-│   └── superset_visualization.png
+│   ├── etl_.py
+├── superset_visualization.png
 └── README.md
 ```
 
@@ -52,8 +51,10 @@ Before you begin, ensure you have the following installed:
 Clone this repository to your local machine:
 
 ```bash
-git clone <repository-url>
-cd data-warehousing-project
+git clone https://github.com/1abdelhalim/DWH-with-Apache-Hive-and-PostgreSQL
+cd 
+DWH-with-Apache-Hive-and-PostgreSQL
+Private
 ```
 
 ### Step 2: Start Docker Containers
@@ -135,7 +136,7 @@ docker-compose up -d
 
 ### Step 5: Modify the ETL Script
 
-Ensure the `etl_script.py` uses the correct PostgreSQL user and database credentials:
+Ensure the `etl.py` uses the correct PostgreSQL user and database credentials:
 
 ```python
 postgres_engine = create_engine('postgresql://energy_user:energy_password@localhost:5432/energy_db')
@@ -146,7 +147,7 @@ postgres_engine = create_engine('postgresql://energy_user:energy_password@localh
 Run the ETL script to extract data from the CSV file and load it into PostgreSQL and Hive:
 
 ```bash
-python etl/etl_script.py
+python etl/etl.py
 ```
 
 ### Step 7: Access Apache Superset
