@@ -160,17 +160,3 @@ python etl/etl_script.py
 1. Go to **Charts** to create new visualizations using your data.
 2. Use the **Dashboards** feature to compile your charts into an interactive dashboard.
 
-## Conclusion
-
-This project demonstrates the integration of Apache Hive and PostgreSQL within a data warehousing architecture, utilizing Docker for simplified deployment and Apache Superset for data visualization.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Apache Hive](https://hive.apache.org/)
-- [PostgreSQL](https://www.postgresql.org/)
-- [Apache Superset](https://superset.apache.org/)
-- [Docker](https://www.docker.com/)
