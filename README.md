@@ -6,7 +6,7 @@ This project aims to build a data warehousing solution using Apache Hive for dat
 
 ### Objectives
 
-- Store commodity transaction data in Apache Hive.
+- Store  transaction data in Apache Hive.
 - Design a dimensional model for the data warehouse.
 - Apply ETL (Extract, Transform, Load) processes to load data into PostgreSQL tables.
 - Connect PostgreSQL to Apache Superset for data visualization and analytics.
@@ -112,7 +112,7 @@ docker-compose up -d
        country_name STRING
    );
 
-   CREATE TABLE Dim_Commodity (
+   CREATE TABLE Dim_category (
        category STRING
    );
 
@@ -121,7 +121,7 @@ docker-compose up -d
        year INT
    );
 
-   CREATE TABLE Fact_Commodity_Transactions (
+   CREATE TABLE Fact_Transactions (
        transaction_id INT,
        quantity DOUBLE,
        unit STRING
